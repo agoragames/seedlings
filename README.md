@@ -2,6 +2,8 @@
 
 A little project to make seeding data easier to deal with across multiple ORMs.
 
+**N.B.** This is early-release code that writes data to your database. While it is extracted from a live app, there may be cases where it blows up still :). Please test first. I don't want to hear about lost production data because you didn't try it in development first :).
+
 ## Usage
 
     gem "seedlings"
