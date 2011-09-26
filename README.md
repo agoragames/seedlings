@@ -15,7 +15,7 @@ There are two methods of note: `.plant` and `.plant_and_return`. They take 3 par
 * the Class to use (must support `ActiveModel`ish interface, like MongoMapper, Mongoid, ActiveRecord)
 * options you want Seedlings to respect, of which there are two:
   * `:constrain` which takes a column name or array of column names that will be used to find the records, and
-  * `:dont_update_existing`, which, if set to true, will cause Seedlings to skip updating existing records.
+  * `:update_existing`, which, if set to false, will cause Seedlings to skip updating existing records. **By default Seedlings always updates.**
 * the third parameter is that data you want seeded. `.plant` takes however many attribute hashes you give it. `.plant_and_return` takes only a single hash, but returns the resulting object.
 
 Here's some examples:

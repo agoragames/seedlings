@@ -41,7 +41,7 @@ describe Seedlings do
   describe "#initialize" do
     it "stashes the class, options, and data as attributes" do
       seeds.klass.should == Widget
-      seeds.options.should == { :constrain => :name }
+      seeds.options.should == { :constrain => :name, :update_existing => true }
       seeds.data.should == []
     end
   end
@@ -129,8 +129,8 @@ describe Seedlings::ActiveModel do
         seedlings.find_and_update_model_with the_attrs
         Widget.where(name: "Basic text elements").first.context.should == "hero"
       end
-      it "skips the update if you've given it the :dont_update_existing option" do
-        seeds = Seedlings.new(Widget, { :constrain => :name, :dont_update_existing => true }, the_attrs )
+      it "skips the update if you've set :update_existing to false" do
+        seeds = Seedlings.new(Widget, { :constrain => :name, :update_existing => false }, the_attrs )
         seeds.find_and_update_model_with the_attrs
         Widget.where(name: "Basic text elements").first.context.should == "columns"
       end

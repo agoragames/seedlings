@@ -18,7 +18,7 @@ class Seedlings
   
   def initialize klass, options, data
     self.klass = klass
-    self.options = options
+    self.options = { :update_existing => true }.merge(options)
     self.data = data
     adapt!
   end
@@ -70,8 +70,8 @@ class Seedlings
       object = find_model_with the_data
       if object
         puts "FOUND: #{object.inspect}"
-        if options[:dont_update_existing]
-          puts "  * skipping update as per options[:dont_update_existing]"
+        if !options[:update_existing]
+          puts "  * skipping update as per options[:update_existing]"
         else
           puts "  * updating with #{the_data}"
           object.update_attributes(the_data)
