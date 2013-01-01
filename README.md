@@ -68,4 +68,4 @@ TODO:
 
 ## Copyright
 
-Copyright (c) 2011 Matt Wilson. See LICENSE for details.
+Copyright (c) 2011-2013 Matt Wilson. See LICENSE for details.
