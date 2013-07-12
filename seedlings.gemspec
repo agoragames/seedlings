@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = ""
   s.summary     = "Simple seed data management"
   s.description = "An ActiveModel (MongoMapper/Mongoid/ActiveRecord 3+) compliant seed data handler for any ruby project."
+  s.license     = 'MIT'
 
   s.rubyforge_project = "seedlings"
 
@@ -17,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
-  
+
   s.add_development_dependency("rspec")
   s.add_development_dependency("mongo_mapper")
   s.add_development_dependency("mongoid")
