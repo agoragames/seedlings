@@ -21,7 +21,7 @@ There are two methods of note: `.plant` and `.plant_and_return`. They take 3 par
 Here's some examples:
 
 ```ruby
-Seedlings.plant(Widget, { :constrain => :name }, 
+Seedlings.plant(Widget, { :constrain => :name },
   # your seed data goes here, as a bunch of hashes.
   # Make sure you include values for any constraint columns you've specified!
   { :name => "Gizwidget", :context => "science!" },
@@ -35,7 +35,7 @@ If some of your seed data depends on other records, switch up to `Seedlings.plan
 ```ruby
 parent_thing = Seedlings.plant_and_return(Thing, {}, { :name => "I'm a Parent!" })
 
-Seedlings.plant(ChildThing, {}, 
+Seedlings.plant(ChildThing, {},
   { :name => "Child Bit", :context => "docco", :parent => parent_thing },
   # ...
 )
@@ -57,7 +57,7 @@ TODO:
 * more options, etc, as desired
 
 ## Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
@@ -68,4 +68,4 @@ TODO:
 
 ## Copyright
 
-Copyright (c) 2011-2013 Matt Wilson. See LICENSE for details.
+Copyright (c) 2011-2014 Matt Wilson. See LICENSE for details.
